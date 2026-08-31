@@ -14,7 +14,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chronus-dev/utils": "0.1.1",
+    "@chronus-dev/utils": "^0.1.1",
     "vue": "^3.5.42",
     "vue-router": "^5.3.0"
   },

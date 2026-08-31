@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@chronus-dev/utils':
-        specifier: 0.1.1
+        specifier: ^0.1.1
         version: 0.1.1
       vue:
         specifier: ^3.5.42
