@@ -1,4 +1,2 @@
 allowBuilds:
   simple-git-hooks: true
-minimumReleaseAgeExclude:
-  - '@chronus-dev/utils@0.1.1'
