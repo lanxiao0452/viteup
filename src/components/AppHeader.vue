@@ -5,57 +5,82 @@
         {{ route.name }}
       </RouterLink>
     </nav>
-    <label for="dark-mode-toggle">
-      <div>Switch Dark Mode</div>
-      <input
-        type="checkbox"
-        id="dark-mode-toggle"
-        :checked="darkMode"
-        @change="darkMode = !darkMode"
-      />
-    </label>
+    <div class="switch-lable">Switch Dark Mode</div>
+    <div class="switch-mode">
+      <label>
+        <span>Auto</span>
+        <input v-model="colorScheme" type="radio" value="auto" />
+      </label>
+      <label>
+        <span>Light</span>
+        <input v-model="colorScheme" type="radio" value="light" />
+      </label>
+      <label>
+        <span>Dark</span>
+        <input v-model="colorScheme" type="radio" value="dark" />
+      </label>
+    </div>
   </header>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 
 const router = useRouter()
 const routes = router.getRoutes()
 
-const darkMode = ref(false)
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+const colorScheme = ref(localStorage.getItem('viteup-color-scheme') || 'auto')
+
+function updateColorScheme() {
+  document.documentElement.classList.toggle(
+    'dark',
+    colorScheme.value === 'dark' || (prefersDark.matches && colorScheme.value !== 'light'),
+  )
+}
 
 watch(
-  () => darkMode.value,
+  () => colorScheme.value,
   (value) => {
-    if (value) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
+    localStorage.setItem('viteup-color-scheme', value)
+    updateColorScheme()
   },
 )
+
+onMounted(() => {
+  prefersDark.addEventListener('change', updateColorScheme)
+})
+
+onUnmounted(() => {
+  prefersDark.removeEventListener('change', updateColorScheme)
+})
 </script>
 
 <style lang="less">
 .app-header {
   width: 100%;
-  height: 124px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 16px;
 
-  label {
+  .switch-lable {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 40px 0 10px;
+  }
+
+  .switch-mode {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    gap: 16px;
+    font-size: 16px;
 
-    input[type='checkbox'] {
-      width: 16px;
-      height: 16px;
+    label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
   }
 
@@ -64,7 +89,13 @@ watch(
     gap: 16px;
 
     a {
+      font-size: 28px;
       text-decoration: solid;
+      transition: 0.2s;
+
+      &:hover {
+        color: color-mix(in srgb, var(--v-text-color) 50%, var(--v-bg-color) 50%);
+      }
     }
   }
 }
