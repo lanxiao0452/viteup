@@ -1,15 +1,18 @@
 <template>
-  <AppHeader />
-  <h1>About Page</h1>
+  <div class="viteup">Viteup</div>
+  <p class="description">
+    A modern Vite starter template for building fast, maintainable web applications.
+  </p>
+  <div class="divider"></div>
+  <RouterLink to="/" class="link">Go to Index</RouterLink>
 </template>
 
 <script setup lang="ts">
-import AppHeader from '@/components/AppHeader.vue'
+import { RouterLink } from 'vue-router'
 </script>
 
 <style lang="less">
-h1 {
-  display: flex;
-  justify-content: center;
+.description {
+  font-size: 16px;
 }
 </style>
