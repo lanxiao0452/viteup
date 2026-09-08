@@ -24,7 +24,7 @@
     "@types/node": "^26.4.1",
     "@vitejs/plugin-vue": "^6.0.8",
     "less": "^4.9.1",
-    "lint-staged": "^17.4.1",
+    "lint-staged": "^17.5.0",
     "oxfmt": "^0.66.0",
     "oxlint": "^1.81.0",
     "simple-git-hooks": "^2.14.0",
