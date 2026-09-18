@@ -7,11 +7,7 @@
   <RouterLink to="/" class="link">Go to Index</RouterLink>
 </template>
 
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
-</script>
-
-<style lang="less">
+<style lang="scss">
 .description {
   font-size: 16px;
 }

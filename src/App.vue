@@ -2,13 +2,7 @@
   <RouterView />
 </template>
 
-<script setup lang="ts">
-import { RouterView } from 'vue-router'
-</script>
-
-<style lang="less">
-@import '@/assets/styles/index';
-
+<style lang="scss">
 #app {
   display: flex;
   align-items: center;
