@@ -1,0 +1,17 @@
+@layer theme {
+  :root {
+    --v-text-color: #18191c;
+    --v-bg-color: #ffffff;
+  }
+
+  .dark {
+    --v-text-color: #e7e9eb;
+    --v-bg-color: #17181a;
+  }
+
+  html,
+  body {
+    color: var(--v-text-color);
+    background-color: var(--v-bg-color);
+  }
+}

@@ -34,10 +34,9 @@ import IconVite from '@/components/icons/vite.vue'
 import IconVue from '@/components/icons/vue.vue'
 import VColorScheme from '@/components/VColorScheme.vue'
 import VCounter from '@/views/index/components/VCounter.vue'
-import { RouterLink } from 'vue-router'
 </script>
 
-<style lang="less">
+<style lang="scss">
 .technologies {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

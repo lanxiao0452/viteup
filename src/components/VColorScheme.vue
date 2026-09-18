@@ -45,7 +45,7 @@ onUnmounted(() => {
 })
 </script>
 
-<style lang="less">
+<style lang="scss">
 .color-scheme {
   display: flex;
   align-items: center;

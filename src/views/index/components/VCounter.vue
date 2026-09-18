@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
 const count = ref(props.initialCount)
 </script>
 
-<style lang="less">
+<style lang="scss">
 .counter {
   color: var(--v-text-color);
   font-size: 14px;
