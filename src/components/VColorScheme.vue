@@ -61,7 +61,6 @@ onUnmounted(() => {
     background-color: var(--v-bg-color);
     border: none;
     padding: 8px 16px;
-    cursor: pointer;
     transition: 0.2s;
 
     &:first-child {

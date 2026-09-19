@@ -32,7 +32,6 @@
   border: 1px solid color-mix(in srgb, var(--v-text-color) 20%, transparent);
   border-radius: 6px;
   padding: 8px 16px;
-  cursor: pointer;
   transition: 0.2s;
 
   &:hover {
