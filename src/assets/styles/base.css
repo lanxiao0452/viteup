@@ -145,6 +145,11 @@
   button,
   input:where([type='button'], [type='reset'], [type='submit']) {
     appearance: button;
+    cursor: default;
+  }
+
+  button:not(:disabled),
+  input:where([type='button'], [type='reset'], [type='submit']):not(:disabled) {
     cursor: pointer;
   }
 
