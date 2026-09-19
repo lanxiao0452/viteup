@@ -23,7 +23,7 @@ A modern Vite starter template for building fast, maintainable web applications.
 | typescript         | [![typescript](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Flanxiao0452%2Fviteup%2Fraw%2Fmain%2Fpackage.json&query=%24.devDependencies.typescript&label=)](https://www.npmjs.com/package/typescript)                             |
 | @types/node        | [![@types/node](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Flanxiao0452%2Fviteup%2Fraw%2Fmain%2Fpackage.json&query=%24.devDependencies.%40types%2Fnode&label=)](https://www.npmjs.com/package/@types/node)                      |
 | vue-tsc            | [![vue-tsc](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Flanxiao0452%2Fviteup%2Fraw%2Fmain%2Fpackage.json&query=%24.devDependencies.vue-tsc&label=)](https://www.npmjs.com/package/vue-tsc)                                      |
-| less               | [![less](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Flanxiao0452%2Fviteup%2Fraw%2Fmain%2Fpackage.json&query=%24.devDependencies.less&label=)](https://www.npmjs.com/package/less)                                               |
+| sass-embedded      | [![sass-embedded](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Flanxiao0452%2Fviteup%2Fraw%2Fmain%2Fpackage.json&query=%24.devDependencies.sass-embedded&label=)](https://www.npmjs.com/package/sass-embedded)                    |
 
 ## Usage
 
